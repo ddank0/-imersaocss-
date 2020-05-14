@@ -1,12 +1,51 @@
+/* soft reset css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body { 
     background: url("https://i.ibb.co/vsHjZwM/IMG-20200511-121503.jpg"); 
     background-size: auto 100vh;
     font-family: arial;
     height: 100vh;
+    font-size: 10px;
+}
+
+/* se a tela tiver pelo menos 400px vai carregar estes estilos  */
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* breakpoint */
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu { 
     background-color:white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
 }
 
 a {
@@ -27,6 +66,11 @@ a:hover {
     list-style: none;
 }
 
+.menu a {
+    display: block;
+    padding: 10px 20px ;
+}
+
 .site-subtitle,
 .site-title {
     color: whitesmoke;
@@ -35,4 +79,13 @@ a:hover {
 
 .site-subtitle {
     font-style: italic;
+}
+
+.site-title {
+    font-size: 4em;
+}
+
+.img-portfolio {
+    height: 180px;
+    width: 180px;
 }
