@@ -55,7 +55,7 @@ header {
 a {
     color: rgb(188, 65, 245);
     text-decoration: none ;
-    
+
 }
 
 a:hover {
@@ -225,39 +225,39 @@ a:hover {
     transform: scale(1.2);
 
 }
-
-.card {
+ 
+/* .card {
     
-    /* position: relative; */
-    /* transform-style: preserve-3d;
-    transition: transform 3s; */
+     position: relative; 
+     transform-style: preserve-3d;
+    transition: transform 3s; 
 }
 
 .card-front, 
 .card-back {
-    /* backface-visibility: hidden; */
-    /* position: absolute;    */
-    /* top: 0; */
-    /* left: 0; */
+    backface-visibility: hidden;
+    position: absolute;   
+    top: 0;
+    left: 0;
 
 }
 
 .flip-card {
     
-    /* perspective: 800px; */
+    perspective: 800px;
 }
 
 .flip-card:hover .card {
-    /* transform: rotateY(180deg); */
+    transform: rotateY(180deg);
 }
 
 .card-back {
-    /* background-color: rgba(245, 216, 153, 0.76);
+    background-color: rgba(245, 216, 153, 0.76);
     height: 180px;
     width: 100%;
     color: black;
-    /* transform: rotateY(180deg); */
-} 
+     transform: rotateY(180deg); 
+} */
 
 .contato .icons {
     text-align: center;
