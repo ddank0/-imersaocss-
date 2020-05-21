@@ -6,11 +6,13 @@
     box-sizing: border-box;
 }
 body { 
-    background: url("https://i.ibb.co/vsHjZwM/IMG-20200511-121503.jpg"); 
-    background-size: auto 100vh;
+    background: url("/img/pixel1.jpg"); 
+    background-size:200vh; 
+    background-position: top center;
     font-family: 'Source Code Pro', monospace;
     height: 100vh;
     font-size: 10px;
+    color: whitesmoke;
 }
 
 /* se a tela tiver pelo menos 400px vai carregar estes estilos  */
@@ -42,7 +44,8 @@ header {
 }
 
 .menu { 
-    background-color:white;
+    background-color: rgba(0, 0, 0, 0.63);
+    box-shadow: black 0px -5px 11px 0px;
     position: fixed;
     width: 100vw;
     top: 0;
@@ -50,8 +53,9 @@ header {
 }
 
 a {
-    color: teal;
+    color: rgb(188, 65, 245);
     text-decoration: none ;
+    text-;
 }
 
 a:hover {
@@ -71,11 +75,13 @@ a:hover {
     display: block;
     padding: 10px 20px ;
     transition: background-color 1s, color 0.5s;
+    font-size: 1.2em;
 
 }
 
+
 .menu a:hover {
-    background-color: teal;
+    background-color: rgba(188, 65, 245, 0.486);
     color: whitesmoke;
     text-decoration: none;
 }
@@ -108,28 +114,70 @@ a:hover {
 
 .site-subtitle {
     font-style: italic;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Share Tech Mono', monospace;
     line-height: 1.8em;
+    font-size: 2.5em;
 }
 
 .site-title {
-    font-size: 4em;
-    font-family: 'Coming Soon', cursive;
+    font-size: 5em;
+    font-family: 'Share Tech Mono', monospace;
 }
 
+.sobre,
 .contato,
 .portfolio {
     padding: 2em;
     min-height: 100vh;
+    background-color: black;
     
 }
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.sobre h2,
 .contato h2,
 .portfolio h2 {
     font-family: 'Press Start 2P', cursive;
     color: whitesmoke;
     margin-bottom: 1.5em;
+    margin-top: 1em;
     font-size: 2em;
+}
+
+.sobre p {
+    text-indent: 1.4em;
+    margin-bottom: 1.4em;
+}
+
+.sobre a {
+    color: white;
+    text-decoration: underline;
+}
+
+.sobre a:hover {
+    background-color: wheat;
+    color: black;
+    text-decoration: none;
+}
+
+.sobre .avatar{
+    float: right;
+    margin-left: 2em;
+}
+
+
+
+.avatar img {
+    height: 11em;
+    clip-path: circle();
+    
 }
 
 .portfolio .grid {
@@ -140,6 +188,8 @@ a:hover {
 @media (min-width: 560px) {
     .portfolio .grid {
         grid-template-columns: 240px 240px;
+        align-content: center;
+        justify-content: center;
     }
 }
 
@@ -148,7 +198,13 @@ a:hover {
         grid-template-columns: repeat(3,260px);
         align-content: center;
         justify-content: center;
-        height: calc(100vh - 4em - 48px - 1.5em );
+        height: calc(100vh - 4em - 48px - 1.5em);
+    }
+}
+
+@media (min-width: 880px) {
+    .portfolio h2 {
+        margin-bottom: 0em;
     }
 }
 
@@ -157,11 +213,11 @@ a:hover {
 }
 
 .img-portfolio {
-    height: 240px;
-    width: 240px;
+    height: 180px;
+    width: 100%;
     object-fit: cover;
-    object-position: bottom left;
-    border-radius:50%;
+    /* object-position: ; */
+    /* border-radius:0%; */
     transition: transform 0.5s;
 }
 
@@ -170,18 +226,63 @@ a:hover {
 
 }
 
+.card {
+    
+    /* position: relative; */
+    /* transform-style: preserve-3d;
+    transition: transform 3s; */
+}
+
+.card-front, 
+.card-back {
+    /* backface-visibility: hidden; */
+    /* position: absolute;    */
+    /* top: 0; */
+    /* left: 0; */
+
+}
+
+.flip-card {
+    
+    /* perspective: 800px; */
+}
+
+.flip-card:hover .card {
+    /* transform: rotateY(180deg); */
+}
+
+.card-back {
+    /* background-color: rgba(245, 216, 153, 0.76);
+    height: 180px;
+    width: 100%;
+    color: black;
+    /* transform: rotateY(180deg); */
+} 
+
 .contato .icons {
     text-align: center;
+    
 }
 
 .contato a {
     color: whitesmoke;
-    font-size: 4em;
+    font-size: 3em;
     transition: text-shadow 0.5s;
+    
 }
 
 .contato a:active,
 .contato a:hover {
     text-decoration: none;
     text-shadow:0px 0px 10px #fff9;
+    
+}
+
+.contato {
+    min-height: 16vh;
+    background-color: #1d1633;
+}
+
+.contato h2 {
+    margin: 0;
 }
